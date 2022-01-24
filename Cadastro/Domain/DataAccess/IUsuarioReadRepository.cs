@@ -9,5 +9,6 @@ namespace Cadastro.Domain.DataAccess
     public interface IUsuarioReadRepository
     {
         List<Usuario> GetUsuarioByNome(string nome);
+        Usuario GetUsuarioById(int usuarioId);
     }
 }

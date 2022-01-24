@@ -9,7 +9,7 @@ namespace Cadastro.Application.Command.CadastroUsuario
 {
     public class CadastroUsuarioCommand : IRequestHandler<CadastroUsuarioRequest, CadastroUsuarioResponse>
     {
-         #region Properties
+    #region Properties
     private IUsuarioRepository UsuarioRepository { get ;}
 
     #endregion

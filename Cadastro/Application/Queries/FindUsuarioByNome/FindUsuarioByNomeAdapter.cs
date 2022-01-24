@@ -21,7 +21,8 @@ namespace Cadastro.Application.Queries.FindUsuarioByNome
                     Cep = usuario.Cep,
                     Telefone = usuario.Telefone,
                     Celular = usuario.Celular,
-                    Email = usuario.Email
+                    Email = usuario.Email,
+                    Ativo = usuario.Ativo
                 };
                 usuariosDto.Add(usuarioDto); 
             }); 

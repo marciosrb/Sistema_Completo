@@ -27,9 +27,16 @@ namespace Cadastro.Infrastructure.Repositories.EntityFramework
 
         public List<Usuario> GetUsuarioByNome(string nome)
         {          
-            var response = UsuarioRepository.Find(x => x.Nome.Contains(nome)).ToList();            
+            var response = UsuarioRepository.Find(x => x.Nome.Contains(nome) && x.Ativo == 1).ToList();          
 
             return response;
+        }
+
+        public Usuario GetUsuarioById(int usuarioId)
+        {
+            var response = UsuarioRepository.Find(x => x.Id == usuarioId && x.Ativo == 1);
+
+            return response.FirstOrDefault();
         }
     }
 }

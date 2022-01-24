@@ -10,6 +10,6 @@ namespace Cadastro.Domain.Entity
         public int Telefone { get; set; }
         public int Celular { get; set; }
         public string Email { get; set; }
-        
+        public int Ativo { get; set; }        
     }
 }

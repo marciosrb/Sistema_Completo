@@ -29,6 +29,10 @@ namespace Cadastro.Application.DataTransferObject
         [JsonPropertyNameAttribute("email")]
         public string Email { get; set; } 
 
+        [JsonIgnore]
+        [JsonPropertyNameAttribute("ativo")]
+        public int Ativo { get; set; } 
+
         internal static Usuario ToValueObject(UsuarioDto usuario)
         {
             return new Usuario
@@ -40,7 +44,8 @@ namespace Cadastro.Application.DataTransferObject
                 Cep = usuario.Cep,
                 Telefone = usuario.Telefone,
                 Celular = usuario.Celular,
-                Email = usuario.Email
+                Email = usuario.Email,
+                Ativo = 1
             };
         }
     }

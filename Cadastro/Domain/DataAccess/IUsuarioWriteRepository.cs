@@ -7,5 +7,7 @@ namespace Cadastro.Domain.DataAccess
     public interface IUsuarioWriteRepository
     {
         Task<Usuario> Create(Usuario usuario, CancellationToken cancellationToken);
+
+        bool Delete(int usuarioId);
     }
 }

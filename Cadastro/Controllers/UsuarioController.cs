@@ -1,5 +1,6 @@
 ﻿using Ardalis.GuardClauses;
 using Cadastro.Application.Command.CadastroUsuario;
+using Cadastro.Application.Command.DeleteUsuario;
 using Cadastro.Application.Queries.FindUsuarioByNome;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
@@ -56,6 +57,20 @@ namespace Cadastro.Controllers
         }
 
         #endregion
+
+        [HttpDelete]
+        [Route("{usuarioId}")]
+        public async Task<ActionResult> Usuario([FromRoute] int usuarioId, CancellationToken cancellationToken)
+        {
+            var request = new DeleteUsuarioRequest
+            {
+                UsuarioId = usuarioId
+            };
+
+            var response = await Mediator.Send(request, cancellationToken);
+          
+            return Ok(response);
+        }
 
         
     }

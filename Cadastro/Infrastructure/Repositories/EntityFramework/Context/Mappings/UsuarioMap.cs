@@ -30,7 +30,7 @@ namespace Cadastro.Infrastructure.Repositories.EntityFramework.Mappings
 
             builder.Property(c => c.Email).HasColumnName("EMAIL").HasColumnType("int").IsRequired(true);
 
-            
+            builder.Property(c => c.Ativo).HasColumnName("ATIVO").HasColumnType("int").IsRequired(true);            
           
         }
     }

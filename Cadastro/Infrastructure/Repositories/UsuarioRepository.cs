@@ -31,24 +31,24 @@ namespace Cadastro.Infrastructure.Repositories
         {
             return UsuarioReadRepository.GetUsuarioByNome(nome).ToList();
         }
-/*
-        public bool Delete(int beneficiaryId)
+
+        public bool Delete(int usuarioId)
         {
-            Logger.Information<int>("Calling the method BeneficiaryWriteRepository.Delete", beneficiaryId);
-            return  BeneficiaryWriteRepository.Delete(beneficiaryId);
+            return  UsuarioWriteRepository.Delete(usuarioId);
         }
 
+        public Usuario GetUsuarioById(int usuarioId)
+        {
+            return  UsuarioReadRepository.GetUsuarioById(usuarioId);
+        }
+/*
         public bool Update(Domain.Entity.Beneficiary beneficiary)
         {
             Logger.Information<Domain.Entity.Beneficiary>("Calling the method BeneficiaryWriteRepository.Update", beneficiary);
             return  BeneficiaryWriteRepository.Update(beneficiary);
         }
 
-        public Domain.Entity.Beneficiary FindBeneficiaryById(int beneficiaryId)
-        {
-            Logger.Information<int>("Calling the method BeneficiaryReadRepository.FindBeneficiaryById", beneficiaryId);
-            return  BeneficiaryReadRepository.FindBeneficiaryById(beneficiaryId);
-        }
+        
 
         public List<Domain.Entity.Beneficiary> FindAllByUserId(int userId)
         {
